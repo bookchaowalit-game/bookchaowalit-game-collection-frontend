@@ -2,265 +2,30 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Related Projects - Game Collection',
-  description: 'Explore more projects by Bookchaowalit. Discover our collection of web applications and tools.',
-  keywords: ['related projects', 'more apps', 'Bookchaowalit', 'web applications'],
+  title: 'More projects - Book Arcade',
+  description: 'The rest of the bookchaowalit portfolio: productivity tools, dev tools, and a few full products.',
+  keywords: ['related projects', 'more apps', 'bookchaowalit', 'web applications'],
   openGraph: {
-    title: 'Related Projects - Game Collection',
-    description: 'Explore more projects by Bookchaowalit',
+    title: 'More projects - Book Arcade',
+    description: 'The rest of the bookchaowalit portfolio.',
     type: 'website',
   },
 };
 
 export default function RelatedProjectsPage() {
-  const categories = {
-  "productivity": [
-    {
-      "name": "Pomodoro Timer",
-      "url": "https://bookchaowalit-pomodoro-timer-fronte.vercel.app",
-      "slug": "pomodoro-timer"
-    },
-    {
-      "name": "Habit Tracker",
-      "url": "https://bookchaowalit-habit-tracker-frontend.vercel.app",
-      "slug": "habit-tracker"
-    },
-    {
-      "name": "Goal Tracker",
-      "url": "https://bookchaowalit-goal-tracker-frontend.vercel.app",
-      "slug": "goal-tracker"
-    },
-    {
-      "name": "Time Tracker",
-      "url": "https://bookchaowalit-time-tracker-frontend.vercel.app",
-      "slug": "time-tracker"
-    },
-    {
-      "name": "Todo Board",
-      "url": "https://bookchaowalit-todo-board-frontend.vercel.app",
-      "slug": "todo-board"
-    },
-    {
-      "name": "Calendar App",
-      "url": "https://bookchaowalit-calendar-app-frontend.vercel.app",
-      "slug": "calendar-app"
-    },
-    {
-      "name": "Reminders",
-      "url": "https://bookchaowalit-reminders-frontend.vercel.app",
-      "slug": "reminders"
-    }
-  ],
-  "dev-tools": [
-    {
-      "name": "JSON Converter",
-      "url": "https://bookchaowalit-jsonconverter-frontend.vercel.app",
-      "slug": "json-converter"
-    },
-    {
-      "name": "Base64 Encoder",
-      "url": "https://bookchaowalit-base64-frontend.vercel.app",
-      "slug": "base64"
-    },
-    {
-      "name": "Regex Tester",
-      "url": "https://bookchaowalit-regex-frontend.vercel.app",
-      "slug": "regex"
-    },
-    {
-      "name": "Hash Generator",
-      "url": "https://bookchaowalit-hashgen-frontend.vercel.app",
-      "slug": "hashgen"
-    },
-    {
-      "name": "Cron Expression",
-      "url": "https://bookchaowalit-cron-frontend.vercel.app",
-      "slug": "cron"
-    },
-    {
-      "name": "Diff Checker",
-      "url": "https://bookchaowalit-diffchecker-frontend.vercel.app",
-      "slug": "diffchecker"
-    },
-    {
-      "name": "Minifier",
-      "url": "https://bookchaowalit-minifier-frontend.vercel.app",
-      "slug": "minifier"
-    },
-    {
-      "name": "URL Encoder",
-      "url": "https://bookchaowalit-url-encoder-frontend.vercel.app",
-      "slug": "url-encoder"
-    },
-    {
-      "name": "URL Shortener",
-      "url": "https://bookchaowalit-url-shortener-frontend.vercel.app",
-      "slug": "url-shortener"
-    },
-    {
-      "name": "Deep Links",
-      "url": "https://bookchaowalit-deeplinks-frontend.vercel.app",
-      "slug": "deeplinks"
-    }
-  ],
-  "content-tools": [
-    {
-      "name": "Markdown Editor",
-      "url": "https://bookchaowalit-markdown-editor-frontend.vercel.app",
-      "slug": "markdown-editor"
-    },
-    {
-      "name": "Text Summarizer",
-      "url": "https://bookchaowalit-text-summarizer-frontend.vercel.app",
-      "slug": "text-summarizer"
-    },
-    {
-      "name": "Quote Generator",
-      "url": "https://bookchaowalit-quote-generator-front.vercel.app",
-      "slug": "quote-generator"
-    },
-    {
-      "name": "Meme Generator",
-      "url": "https://bookchaowalit-meme-generator-frontend.vercel.app",
-      "slug": "meme-generator"
-    },
-    {
-      "name": "Number Converter",
-      "url": "https://bookchaowalit-number-converter-frontend.vercel.app",
-      "slug": "number-converter"
-    },
-    {
-      "name": "Date Calculator",
-      "url": "https://bookchaowalit-date-calculator-frontend.vercel.app",
-      "slug": "date-calculator"
-    }
-  ],
-  "webmaster": [
-    {
-      "name": "SEO Analyzer",
-      "url": "https://bookchaowalit-seo-analyzer-frontend.vercel.app",
-      "slug": "seo-analyzer"
-    },
-    {
-      "name": "Analytics Dashboard",
-      "url": "https://bookchaowalit-analytics-dashboard-frontend.vercel.app",
-      "slug": "analytics-dashboard"
-    },
-    {
-      "name": "Uptime Monitor",
-      "url": "https://bookchaowalit-uptime-monitor-frontend.vercel.app",
-      "slug": "uptime-monitor"
-    },
-    {
-      "name": "Error Logs",
-      "url": "https://bookchaowalit-error-logs-frontend.vercel.app",
-      "slug": "error-logs"
-    },
-    {
-      "name": "Redirect Manager",
-      "url": "https://bookchaowalit-redirect-manager-frontend.vercel.app",
-      "slug": "redirect-manager"
-    },
-    {
-      "name": "Status Page",
-      "url": "https://bookchaowalit-status-frontend.vercel.app",
-      "slug": "status"
-    },
-    {
-      "name": "Popular Pages",
-      "url": "https://bookchaowalit-popular-pages-frontend.vercel.app",
-      "slug": "popular-pages"
-    },
-    {
-      "name": "Link Analytics",
-      "url": "https://bookchaowalit-link-analytics-frontend.vercel.app",
-      "slug": "link-analytics"
-    },
-    {
-      "name": "Webhook Tester",
-      "url": "https://bookchaowalit-webhook-tester-frontend.vercel.app",
-      "slug": "webhook-tester"
-    }
-  ],
-  "communication": [
-    {
-      "name": "Contact Forms",
-      "url": "https://bookchaowalit-contact-forms-frontend.vercel.app",
-      "slug": "contact-forms"
-    },
-    {
-      "name": "Newsletter",
-      "url": "https://bookchaowalit-newsletter-frontend.vercel.app",
-      "slug": "newsletter"
-    },
-    {
-      "name": "Comments",
-      "url": "https://bookchaowalit-comments-frontend.vercel.app",
-      "slug": "comments"
-    },
-    {
-      "name": "Guestbook",
-      "url": "https://bookchaowalit-guestbook-frontend.vercel.app",
-      "slug": "guestbook"
-    },
-    {
-      "name": "Chat Playground",
-      "url": "https://bookchaowalit-chat-playground-frontend.vercel.app",
-      "slug": "chat-playground"
-    }
-  ],
-  "main": [
-    {
-      "name": "Portfolio",
-      "url": "https://bookchaowalit.com",
-      "slug": "portfolio"
-    },
-    {
-      "name": "Blog",
-      "url": "https://bookchaowalit-techblog-frontend.vercel.app",
-      "slug": "techblog"
-    },
-    {
-      "name": "DevHub",
-      "url": "https://bookchaowalit-devhub-frontend.vercel.app",
-      "slug": "devhub"
-    },
-    {
-      "name": "Wiki",
-      "url": "https://bookchaowalit-wiki-frontend.vercel.app",
-      "slug": "wiki"
-    },
-    {
-      "name": "TechSpace",
-      "url": "https://bookchaowalit-techspace-frontend.vercel.app",
-      "slug": "techspace"
-    },
-    {
-      "name": "Tracking",
-      "url": "https://bookchaowalit-tracking-frontend.vercel.app",
-      "slug": "tracking"
-    },
-    {
-      "name": "Linktree",
-      "url": "https://bookchaowalit-linktree-frontend.vercel.app",
-      "slug": "linktree"
-    }
-  ]
-};
-
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
+    <div className="min-h-screen bg-paper py-12 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+        <h1 className="font-pixel text-2xl sm:text-3xl font-bold text-center mb-4 text-ink">
           More Projects
         </h1>
-        <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
+        <p className="text-center text-ink-dim mb-12">
           Explore our collection of web applications and tools
         </p>
 
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'productivity'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -269,12 +34,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-pomodoro-timer-fronte.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Pomodoro Timer
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-pomodoro-timer-fronte.vercel.app →
               </p>
             </Link>
@@ -284,12 +49,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-habit-tracker-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Habit Tracker
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-habit-tracker-frontend.vercel.app →
               </p>
             </Link>
@@ -299,12 +64,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-goal-tracker-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Goal Tracker
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-goal-tracker-frontend.vercel.app →
               </p>
             </Link>
@@ -314,12 +79,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-time-tracker-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Time Tracker
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-time-tracker-frontend.vercel.app →
               </p>
             </Link>
@@ -329,12 +94,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-todo-board-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Todo Board
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-todo-board-frontend.vercel.app →
               </p>
             </Link>
@@ -344,12 +109,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-calendar-app-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Calendar App
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-calendar-app-frontend.vercel.app →
               </p>
             </Link>
@@ -359,12 +124,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-reminders-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Reminders
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-reminders-frontend.vercel.app →
               </p>
             </Link>
@@ -374,7 +139,7 @@ export default function RelatedProjectsPage() {
         
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'dev tools'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -383,12 +148,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-jsonconverter-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 JSON Converter
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-jsonconverter-frontend.vercel.app →
               </p>
             </Link>
@@ -398,12 +163,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-base64-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Base64 Encoder
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-base64-frontend.vercel.app →
               </p>
             </Link>
@@ -413,12 +178,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-regex-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Regex Tester
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-regex-frontend.vercel.app →
               </p>
             </Link>
@@ -428,12 +193,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-hashgen-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Hash Generator
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-hashgen-frontend.vercel.app →
               </p>
             </Link>
@@ -443,12 +208,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-cron-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Cron Expression
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-cron-frontend.vercel.app →
               </p>
             </Link>
@@ -458,12 +223,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-diffchecker-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Diff Checker
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-diffchecker-frontend.vercel.app →
               </p>
             </Link>
@@ -473,12 +238,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-minifier-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Minifier
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-minifier-frontend.vercel.app →
               </p>
             </Link>
@@ -488,12 +253,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-url-encoder-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 URL Encoder
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-url-encoder-frontend.vercel.app →
               </p>
             </Link>
@@ -503,12 +268,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-url-shortener-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 URL Shortener
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-url-shortener-frontend.vercel.app →
               </p>
             </Link>
@@ -518,12 +283,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-deeplinks-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Deep Links
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-deeplinks-frontend.vercel.app →
               </p>
             </Link>
@@ -533,7 +298,7 @@ export default function RelatedProjectsPage() {
         
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'content tools'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -542,12 +307,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-markdown-editor-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Markdown Editor
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-markdown-editor-frontend.vercel.app →
               </p>
             </Link>
@@ -557,12 +322,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-text-summarizer-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Text Summarizer
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-text-summarizer-frontend.vercel.app →
               </p>
             </Link>
@@ -572,12 +337,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-quote-generator-front.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Quote Generator
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-quote-generator-front.vercel.app →
               </p>
             </Link>
@@ -587,12 +352,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-meme-generator-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Meme Generator
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-meme-generator-frontend.vercel.app →
               </p>
             </Link>
@@ -602,12 +367,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-number-converter-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Number Converter
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-number-converter-frontend.vercel.app →
               </p>
             </Link>
@@ -617,12 +382,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-date-calculator-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Date Calculator
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-date-calculator-frontend.vercel.app →
               </p>
             </Link>
@@ -632,7 +397,7 @@ export default function RelatedProjectsPage() {
         
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'webmaster'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -641,12 +406,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-seo-analyzer-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 SEO Analyzer
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-seo-analyzer-frontend.vercel.app →
               </p>
             </Link>
@@ -656,12 +421,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-analytics-dashboard-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Analytics Dashboard
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-analytics-dashboard-frontend.vercel.app →
               </p>
             </Link>
@@ -671,12 +436,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-uptime-monitor-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Uptime Monitor
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-uptime-monitor-frontend.vercel.app →
               </p>
             </Link>
@@ -686,12 +451,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-error-logs-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Error Logs
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-error-logs-frontend.vercel.app →
               </p>
             </Link>
@@ -701,12 +466,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-redirect-manager-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Redirect Manager
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-redirect-manager-frontend.vercel.app →
               </p>
             </Link>
@@ -716,12 +481,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-status-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Status Page
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-status-frontend.vercel.app →
               </p>
             </Link>
@@ -731,12 +496,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-popular-pages-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Popular Pages
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-popular-pages-frontend.vercel.app →
               </p>
             </Link>
@@ -746,12 +511,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-link-analytics-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Link Analytics
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-link-analytics-frontend.vercel.app →
               </p>
             </Link>
@@ -761,12 +526,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-webhook-tester-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Webhook Tester
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-webhook-tester-frontend.vercel.app →
               </p>
             </Link>
@@ -776,7 +541,7 @@ export default function RelatedProjectsPage() {
         
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'communication'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -785,12 +550,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-contact-forms-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Contact Forms
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-contact-forms-frontend.vercel.app →
               </p>
             </Link>
@@ -800,12 +565,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-newsletter-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Newsletter
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-newsletter-frontend.vercel.app →
               </p>
             </Link>
@@ -815,12 +580,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-comments-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Comments
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-comments-frontend.vercel.app →
               </p>
             </Link>
@@ -830,12 +595,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-guestbook-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Guestbook
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-guestbook-frontend.vercel.app →
               </p>
             </Link>
@@ -845,12 +610,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-chat-playground-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Chat Playground
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-chat-playground-frontend.vercel.app →
               </p>
             </Link>
@@ -860,7 +625,7 @@ export default function RelatedProjectsPage() {
         
         
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white capitalize">
+          <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase mb-6">
             {'Main Sites'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -869,12 +634,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Portfolio
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit.com →
               </p>
             </Link>
@@ -884,12 +649,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-techblog-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Blog
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-techblog-frontend.vercel.app →
               </p>
             </Link>
@@ -899,12 +664,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-devhub-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 DevHub
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-devhub-frontend.vercel.app →
               </p>
             </Link>
@@ -914,12 +679,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-wiki-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Wiki
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-wiki-frontend.vercel.app →
               </p>
             </Link>
@@ -929,12 +694,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-techspace-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 TechSpace
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-techspace-frontend.vercel.app →
               </p>
             </Link>
@@ -944,12 +709,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-tracking-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Tracking
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-tracking-frontend.vercel.app →
               </p>
             </Link>
@@ -959,12 +724,12 @@ export default function RelatedProjectsPage() {
               href="https://bookchaowalit-linktree-frontend.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="block p-6 bg-paper-raised border border-border rounded-lg shadow-sm transition-transform motion-safe:hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
             >
-              <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold mb-2 text-ink">
                 Linktree
               </h3>
-              <p className="text-sm text-blue-600 dark:text-blue-400">
+              <p className="text-sm text-accent">
                 https://bookchaowalit-linktree-frontend.vercel.app →
               </p>
             </Link>

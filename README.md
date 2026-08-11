@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Book Arcade
 
-## Getting Started
+A small arcade of games by [bookchaowalit](https://bookchaowalit.com), built in
+public. No games are shipped yet — the homepage says so plainly and tracks the
+three real build stages instead of hiding behind a "coming soon" placeholder.
+See [`PRODUCT.md`](./PRODUCT.md) for the full product brief (audience, problem,
+visual identity, and why the empty state is the honest content right now).
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── page.tsx           # homepage: hero, build-status ladder, portfolio cross-link
+├── not-found.tsx       # styled 404
+├── more-projects/      # directory of sibling bookchaowalit-* products
+├── api/mcp/             # MCP server endpoint (shared portfolio infrastructure)
+└── globals.css          # Book Design System tokens (Game domain accent)
+```
 
-## Learn More
+Design tokens follow the shared Book Design System doc (solo-empire workspace: docs/systems/book-design-system.md — not part of this repo) —
+ink/paper neutrals plus one domain accent (`Game`, magenta-purple). The
+`Press Start 2P` pixel face is used only for the wordmark, eyebrows, and the
+primary CTA; body text stays on Geist Sans for legibility.
 
-To learn more about Next.js, take a look at the following resources:
+## Status
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Stage 1 (visual identity & shell) shipped 2026-08-04. Stage 2 (first playable
+game) is not started — see the status ladder on the homepage for the current,
+honest state.

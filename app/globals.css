@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
+/* Book Design System tokens — Game domain accent.
+   See docs/systems/book-design-system.md in the solo-empire workspace. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f4f5f2;
+  --paper-raised: #ffffff;
+  --ink: #16181c;
+  --ink-dim: #575c60;
+  --ink-faint: #8a8f91;
+  --border: #dbded7;
+  --border-soft: #e9ebe5;
+
+  --accent: #9a3dbe;
+  --accent-soft: #f2e4f7;
+  --accent-ink: #ffffff;
+
+  --good: #1c7f58;
+  --warn: #a6791e;
+  --danger: #c4452a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-dim: var(--ink-dim);
+  --color-ink-faint: var(--ink-faint);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-pixel: var(--font-press-start);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #15171b;
+    --paper-raised: #1c1f24;
+    --ink: #ecede9;
+    --ink-dim: #a5aaac;
+    --ink-faint: #6c7274;
+    --border: #2c3036;
+    --border-soft: #23262b;
+
+    --accent: #c766e8;
+    --accent-soft: #2e1533;
+    --accent-ink: #1c1424;
+
+    --good: #3eba8a;
+    --warn: #dcac4f;
+    --danger: #e2704e;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent-soft);
 }
