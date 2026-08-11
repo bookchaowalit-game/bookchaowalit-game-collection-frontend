@@ -1,33 +1,10 @@
 import Link from "next/link";
-
-const STAGES = [
-  {
-    label: "Visual identity & shell",
-    detail: "Design tokens, homepage, and honest status — this page.",
-    status: "done" as const,
-  },
-  {
-    label: "First playable game",
-    detail: "One small game, shipped end-to-end, before adding a second.",
-    status: "planned" as const,
-  },
-  {
-    label: "Full arcade",
-    detail: "Three or more games, a real select screen, high scores.",
-    status: "planned" as const,
-  },
-];
+import { STAGES, STATUS_LABEL } from "@/lib/roadmap";
 
 const STATUS_STYLE: Record<string, string> = {
   done: "bg-good/15 text-good border-good/30",
   progress: "bg-warn/15 text-warn border-warn/30",
   planned: "bg-ink-faint/10 text-ink-faint border-ink-faint/20",
-};
-
-const STATUS_LABEL: Record<string, string> = {
-  done: "SHIPPED",
-  progress: "IN PROGRESS",
-  planned: "PLANNED",
 };
 
 export default function Home() {
