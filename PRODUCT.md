@@ -5,30 +5,33 @@
 ## Who is this for
 
 Someone who lands here from bookchaowalit's portfolio or GitHub — curious what the
-game-dev side of the work looks like. Not a general audience looking for a game to
-kill time with; a visitor who wants to see craft and is deciding whether to keep
-clicking around the rest of the portfolio.
+game-dev side of the work looks like. They should be able to play a complete,
+small game quickly and understand that the arcade grows one experiment at a time.
 
 ## Problem this solves
 
-The repo currently ships the literal `create-next-app` scaffold: "Welcome", "This
-project is part of a 101-project portfolio", a generic tech-stack card, a blue
-gradient background. It communicates nothing about games, and nothing about the
-person who built it. Worse, it *claims* to be a project without being one yet —
-that's a credibility problem, not just a visual one.
+The collection needs real playable proof points rather than a static gallery or
+an oversized promise to build every genre at once. Neon Harvest, Signal Shift,
+Gridline, Midnight Market, Pulse Parade, Card Cascade, Last Light, Goal Line, Echo Chamber, Pocket Foundry, Lantern Route, and Prism Drift now
+establish twelve bounded loops — action, logic, tactical strategy, business
+simulation, rhythm timing, roguelite deck-building, survival crafting, sports
+arcade, horror deduction, automation, interactive narrative, and gravity
+platforming — that
+can be tested, replayed, and extended.
 
 ## What a visitor should accomplish in 60 seconds
 
-Understand, without reading any code, that this is a personal arcade being built
-in public — see what's shipped (currently: nothing) versus what's planned, and
-leave with one clear next action: watch the build on GitHub, or move on to
-another project in the portfolio. **Success here is honesty, not a fake demo.**
+Play one of the twelve games in under a minute, understand the current build
+status, and leave with one clear next action: replay a game, watch the build on
+GitHub, or move on to another project in the portfolio. **Success is a small real
+game with an honest next step.**
 
 ## What makes it different from a generic template
 
-- No fictional "coming soon" filler pretending to be a game. The homepage's
-  status section says exactly what's true right now (zero games shipped) and
-  why that's worth watching rather than skipping.
+- No fictional "coming soon" filler pretending to be a game. Neon Harvest,
+  Signal Shift, Gridline, Midnight Market, Pulse Parade, Card Cascade, Last Light,
+  Goal Line, Echo Chamber, Pocket Foundry, Lantern Route, and Prism Drift are real playable slices, while the select screen,
+  high scores, and future games remain explicitly planned.
 - Arcade-cabinet visual language (marquee-style pixel type used sparingly,
   coin-slot/press-button micro-interactions on the primary CTA) instead of a
   generic SaaS card grid.
@@ -58,17 +61,29 @@ another project in the portfolio. **Success here is honesty, not a fake demo.**
 
 ## Real content used on this page
 
-There is no fabricated game content anywhere on this page — verified against
-the two sibling repos in this category
-(`bookchaowalit-arcade-games-mobile`, `bookchaowalit-game-engine-mobile`),
-both of which are also unedited scaffolds with zero commits of real work.
-The homepage instead states that status plainly and links to the one thing
-that *is* real: the source repository.
+The page now links to twelve deterministic client-side games: Neon Harvest, an
+arcade action game with keyboard and touch controls; Signal Shift, a circuit
+logic puzzle with a hint and reset loop; Gridline, a turn-based tactical game
+with pursuit AI; Midnight Market, a five-day business simulation with stock,
+pricing, demand, cash, and reputation choices; and Pulse Parade, a rhythm game
+with timing windows and combo scoring; and Card Cascade, a four-room roguelite
+deck-builder with energy, enemy intent, and card rewards; and Last Light, a
+six-night survival crafting game with resource pressure and shelter upgrades; and
+Goal Line, a five-shot sports arcade game about reading the keeper and choosing
+the right corner and height; and Echo Chamber, a horror deduction game about
+exploring six rooms, spending sanity on evidence, and naming the true source; and
+Pocket Foundry, an automation puzzle about placing machines into a connected
+production chain and shipping three cycles; Lantern Route, an interactive
+narrative about carrying a lantern through five chapters with branching endings;
+and Prism Drift, a gravity-shifting platformer about collecting prisms and
+reaching an exit.
+The homepage still separates shipped games from the remaining arcade
+infrastructure so the build status stays verifiable.
 
 ## Status
 
-v1 shipped as part of the Book UI Portfolio Phase 6 flagship pass
-(2026-08-04). First of the two "blank-slate" Tier A repositories to be
-redesigned — see the
+v12 shipped as the twelfth playable-game slice after the Book UI Portfolio Phase 6
+flagship pass (2026-08-04). First of the two "blank-slate" Tier A repositories
+to be redesigned — see the
 [Phase 1 audit](https://claude.ai/code/artifact/840ec7d5-df97-4bf4-9fad-67155c3b1d50)
 for how it was picked.

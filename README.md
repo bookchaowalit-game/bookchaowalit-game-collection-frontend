@@ -1,10 +1,12 @@
 # Book Arcade
 
 A small arcade of games by [bookchaowalit](https://bookchaowalit.com), built in
-public. No games are shipped yet — the homepage says so plainly and tracks the
-three real build stages instead of hiding behind a "coming soon" placeholder.
-See [`PRODUCT.md`](./PRODUCT.md) for the full product brief (audience, problem,
-visual identity, and why the empty state is the honest content right now).
+public. The first twelve playable games, **Neon Harvest**, **Signal Shift**,
+**Gridline**, **Midnight Market**, **Pulse Parade**, **Card Cascade**, **Last
+Light**, **Goal Line**, **Echo Chamber**, **Pocket Foundry**, **Lantern Route**, and
+**Prism Drift**, are now shipped. The homepage tracks the remaining arcade layer as planned work instead of
+hiding behind a vague "coming soon" promise. See [`PRODUCT.md`](./PRODUCT.md)
+for the product brief.
 
 ## Run locally
 
@@ -19,7 +21,19 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```
 app/
-├── page.tsx           # homepage: hero, build-status ladder, portfolio cross-link
+├── page.tsx           # homepage: hero, build-status ladder, game links
+├── games/neon-harvest/    # first playable arcade game
+├── games/signal-shift/    # second playable puzzle game
+├── games/gridline/        # third playable tactical game
+├── games/midnight-market/ # fourth playable simulation game
+├── games/pulse-parade/    # fifth playable rhythm game
+├── games/card-cascade/    # sixth playable roguelite game
+├── games/last-light/      # seventh playable survival game
+├── games/goal-line/       # eighth playable sports game
+├── games/echo-chamber/    # ninth playable horror deduction game
+├── games/pocket-foundry/  # tenth playable automation game
+├── games/lantern-route/   # eleventh playable interactive narrative game
+├── games/prism-drift/     # twelfth playable gravity platformer game
 ├── not-found.tsx       # styled 404
 ├── more-projects/      # directory of sibling bookchaowalit-* products
 ├── api/mcp/             # MCP server endpoint (shared portfolio infrastructure)
@@ -33,6 +47,8 @@ primary CTA; body text stays on Geist Sans for legibility.
 
 ## Status
 
-Stage 1 (visual identity & shell) shipped 2026-08-04. Stage 2 (first playable
-game) is not started — see the status ladder on the homepage for the current,
-honest state.
+Stage 1 (visual identity & shell) shipped 2026-08-04. Stage 2 (playable game
+layer) shipped with Neon Harvest, Signal Shift, Gridline, Midnight Market,
+Pulse Parade, Card Cascade, Last Light, Goal Line, Echo Chamber, Pocket Foundry,
+Lantern Route, and Prism Drift. Stage 3 (full arcade) is in progress
+— the select screen and high scores remain next.

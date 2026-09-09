@@ -42,14 +42,86 @@ export default function Home() {
             BUILD IN PUBLIC
           </p>
           <h1 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-            A small arcade of games, built where you can watch.
+            A small arcade of games, built one playable idea at a time.
           </h1>
           <p className="mt-5 max-w-xl text-lg text-ink-dim">
-            No games are shipped yet — this page tracks exactly what&apos;s real
-            and what&apos;s still ahead, instead of pretending otherwise.
+            Twelve games are live. Each next game adds one new mechanic, genre, or
+            experiment to the collection.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="/games/neon-harvest"
+              className="font-pixel inline-flex items-center gap-2 rounded-md bg-accent px-5 py-4 text-[10px] tracking-wider text-accent-ink shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY NEON HARVEST
+            </Link>
+            <Link
+              href="/games/signal-shift"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY SIGNAL SHIFT
+            </Link>
+            <Link
+              href="/games/gridline"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY GRIDLINE
+            </Link>
+            <Link
+              href="/games/midnight-market"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY MIDNIGHT MARKET
+            </Link>
+            <Link
+              href="/games/pulse-parade"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY PULSE PARADE
+            </Link>
+            <Link
+              href="/games/card-cascade"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY CARD CASCADE
+            </Link>
+            <Link
+              href="/games/last-light"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY LAST LIGHT
+            </Link>
+            <Link
+              href="/games/goal-line"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY GOAL LINE
+            </Link>
+            <Link
+              href="/games/echo-chamber"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY ECHO CHAMBER
+            </Link>
+            <Link
+              href="/games/pocket-foundry"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY POCKET FOUNDRY
+            </Link>
+            <Link
+              href="/games/lantern-route"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY LANTERN ROUTE
+            </Link>
+            <Link
+              href="/games/prism-drift"
+              className="font-pixel inline-flex items-center gap-2 rounded-md border border-accent/40 bg-paper-raised px-5 py-4 text-[10px] tracking-wider text-accent shadow-sm transition-transform motion-safe:active:translate-y-0.5 motion-safe:hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              ▶ PLAY PRISM DRIFT
+            </Link>
             <a
               href="https://github.com/bookchaowalit-game/bookchaowalit-game-collection-frontend"
               target="_blank"
@@ -73,9 +145,8 @@ export default function Home() {
             What&apos;s actually live right now
           </h2>
           <p className="mt-2 max-w-xl text-ink-dim">
-            Zero games shipped. That&apos;s not a placeholder — it&apos;s the
-            real state, tracked here instead of hidden behind a generic
-            &ldquo;coming soon&rdquo; splash.
+            Twelve games are shipped and playable. The arcade is now moving from
+            game-by-game releases toward a dedicated select screen.
           </p>
 
           <ol className="mt-8 space-y-3">
@@ -101,6 +172,234 @@ export default function Home() {
               </li>
             ))}
           </ol>
+
+          <div className="mt-8 rounded-lg border border-accent/30 bg-accent-soft p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">NOW PLAYING</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Neon Harvest</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  An arcade action round about movement, collection, and finding
+                  a safe route under pressure.
+                </p>
+              </div>
+              <Link
+                href="/games/neon-harvest"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 002</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Signal Shift</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A logic puzzle about rotating circuit tiles until the whole
+                  network comes online.
+                </p>
+              </div>
+              <Link
+                href="/games/signal-shift"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 003</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Gridline</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A turn-based tactical route-planning game with pursuit AI and
+                  three beacons to capture.
+                </p>
+              </div>
+              <Link
+                href="/games/gridline"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 004</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Midnight Market</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A five-day business simulation about stock, pricing, demand,
+                  cash flow, and reputation.
+                </p>
+              </div>
+              <Link
+                href="/games/midnight-market"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 005</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Pulse Parade</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A rhythm timing game about landing notes, building combos, and
+                  keeping a moving parade alive.
+                </p>
+              </div>
+              <Link
+                href="/games/pulse-parade"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 006</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Card Cascade</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A roguelite deck-builder about spending energy, reading enemy
+                  intent, and choosing the right card reward.
+                </p>
+              </div>
+              <Link
+                href="/games/card-cascade"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 007</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Last Light</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A survival crafting game about scrap, batteries, shelter, and
+                  six nights of resource pressure.
+                </p>
+              </div>
+              <Link
+                href="/games/last-light"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 008</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Goal Line</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A sports arcade penalty shootout about reading the keeper,
+                  choosing the shot, and scoring under pressure.
+                </p>
+              </div>
+              <Link
+                href="/games/goal-line"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 009</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Echo Chamber</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A horror deduction game about exploring six rooms, collecting
+                  impossible evidence, and naming the true source.
+                </p>
+              </div>
+              <Link
+                href="/games/echo-chamber"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 010</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Pocket Foundry</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  An automation puzzle about placing conveyors, connecting
+                  processing machines, and shipping a working production chain.
+                </p>
+              </div>
+              <Link
+                href="/games/pocket-foundry"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 011</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Lantern Route</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  An interactive narrative about carrying a lantern through five
+                  chapters and choosing what reaches the lighthouse.
+                </p>
+              </div>
+              <Link
+                href="/games/lantern-route"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-lg border border-border bg-paper-raised p-5">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p className="font-pixel text-[9px] tracking-widest text-accent">GAME 012</p>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Prism Drift</h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-ink-dim">
+                  A gravity-shifting platformer about collecting three prisms,
+                  avoiding the seam, and finding the exit.
+                </p>
+              </div>
+              <Link
+                href="/games/prism-drift"
+                className="shrink-0 rounded-md border border-accent/40 px-4 py-3 text-sm font-medium text-accent transition-colors hover:bg-accent hover:text-accent-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              >
+                Open game →
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* ---------- cross-portfolio link ---------- */}

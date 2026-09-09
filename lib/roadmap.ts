@@ -15,13 +15,13 @@ export const STAGES: Stage[] = [
   },
   {
     label: "First playable game",
-    detail: "One small game, shipped end-to-end, before adding a second.",
-    status: "planned",
+    detail: "Neon Harvest, Signal Shift, Gridline, Midnight Market, Pulse Parade, Card Cascade, Last Light, Goal Line, Echo Chamber, Pocket Foundry, Lantern Route, and Prism Drift — twelve small games shipped end-to-end.",
+    status: "done",
   },
   {
     label: "Full arcade",
-    detail: "Three or more games, a real select screen, high scores.",
-    status: "planned",
+    detail: "Twelve games are live; a dedicated select screen and high scores are next.",
+    status: "progress",
   },
 ];
 
@@ -41,5 +41,5 @@ export function hasShippedGame(stages: Stage[] = STAGES): boolean {
 }
 
 export function honestyCopy(): string {
-  return "No games are shipped yet";
+  return "Twelve games are live";
 }

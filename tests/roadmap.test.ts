@@ -8,16 +8,16 @@ import {
 } from "../lib/roadmap.ts";
 
 describe("game collection roadmap honesty", () => {
-  it("keeps first playable game planned until a real ship", () => {
-    assert.equal(hasShippedGame(), false);
+  it("marks the first playable game shipped only after a real ship", () => {
+    assert.equal(hasShippedGame(), true);
     const playable = STAGES.find((s) => /playable game/i.test(s.label));
     assert.ok(playable);
-    assert.equal(playable?.status, "planned");
+    assert.equal(playable?.status, "done");
   });
 
   it("exposes honest status labels", () => {
     assert.equal(STATUS_LABEL.done, "SHIPPED");
     assert.equal(STATUS_LABEL.planned, "PLANNED");
-    assert.match(honestyCopy(), /No games are shipped yet/i);
+    assert.match(honestyCopy(), /Twelve games are live/i);
   });
 });
