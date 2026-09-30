@@ -46,6 +46,7 @@ canvas games, high scores, UI-level verification.
   shared `lib/game-og.tsx` (title, summary, "GAME 003 / 012"). Verified in
   `next build`: 12 static 1200x630 PNGs, og:image/alt meta per game page.
   Catalog test requires a card for every game.
+- Security deps: `next` 16.1.6 -> 16.3.8 (and `eslint-config-next`) clears critical GHSA-2xp9-vwfh-vxw4 (Image Optimization RCE) plus bundled postcss/sharp highs; lockfile regenerated with same-major `npm audit fix`. `npm audit --omit=dev`: C1/H3/M1/L0 [nanoid:h,next:c,postcss:h,sharp:h] -> C0/H0/M0/L0.
 
 ## Done in pass 2
 - Social cards no longer 404: `/og-image.png` reference removed and
