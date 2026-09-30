@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import MidnightMarketGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Midnight Market — Book Arcade",
   description:
     "A compact business simulation: plan stock, set prices, and grow a night market stall over five days.",
+  alternates: { canonical: gamePath("midnight-market") },
 };
 
 export default function MidnightMarketPage() {
@@ -19,7 +21,7 @@ export default function MidnightMarketPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 004 / 004</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(4)}</span>
         </nav>
       </header>
 

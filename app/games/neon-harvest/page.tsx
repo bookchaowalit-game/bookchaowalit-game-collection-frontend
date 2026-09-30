@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import NeonHarvestGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Neon Harvest — Book Arcade",
   description:
     "A compact arcade game: collect every spark before time runs out, while avoiding the sentries.",
+  alternates: { canonical: gamePath("neon-harvest") },
 };
 
 export default function NeonHarvestPage() {
@@ -19,7 +21,7 @@ export default function NeonHarvestPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 001 / 001</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(1)}</span>
         </nav>
       </header>
 

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import EchoChamberGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Echo Chamber — Book Arcade",
   description:
     "A compact horror deduction game: explore six rooms, collect impossible evidence, and name where the echo begins.",
+  alternates: { canonical: gamePath("echo-chamber") },
 };
 
 export default function EchoChamberPage() {
@@ -19,7 +21,7 @@ export default function EchoChamberPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 009 / 009</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(9)}</span>
         </nav>
       </header>
 

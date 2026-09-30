@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'More projects - Book Arcade',
   description: 'The rest of the bookchaowalit portfolio: productivity tools, dev tools, and a few full products.',
   keywords: ['related projects', 'more apps', 'bookchaowalit', 'web applications'],
+  alternates: { canonical: '/more-projects' },
   openGraph: {
     title: 'More projects - Book Arcade',
     description: 'The rest of the bookchaowalit portfolio.',

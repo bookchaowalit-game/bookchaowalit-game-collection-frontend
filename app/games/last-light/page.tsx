@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import LastLightGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Last Light — Book Arcade",
   description:
     "A compact survival crafting game: gather scrap, protect your shelter, and endure six nights.",
+  alternates: { canonical: gamePath("last-light") },
 };
 
 export default function LastLightPage() {
@@ -19,7 +21,7 @@ export default function LastLightPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 007 / 007</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(7)}</span>
         </nav>
       </header>
 

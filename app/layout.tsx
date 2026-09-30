@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
 import "./globals.css";
@@ -28,9 +29,10 @@ export const metadata: Metadata = {
   authors: [{ name: "bookchaowalit", url: "https://bookchaowalit.com" }],
   creator: "bookchaowalit",
   publisher: "bookchaowalit",
-  metadataBase: new URL("https://bookchaowalit.com"),
+  metadataBase: new URL(SITE_URL),
+  // Pages override this with their own path; see lib/games.ts.
   alternates: {
-    canonical: "https://bookchaowalit.com",
+    canonical: "/",
   },
   openGraph: {
     type: "website",

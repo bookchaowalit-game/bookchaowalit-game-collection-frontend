@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import CardCascadeGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Card Cascade — Book Arcade",
   description:
     "A compact roguelite deck-builder: play cards, read enemy intent, and build a run across four rooms.",
+  alternates: { canonical: gamePath("card-cascade") },
 };
 
 export default function CardCascadePage() {
@@ -19,7 +21,7 @@ export default function CardCascadePage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 006 / 006</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(6)}</span>
         </nav>
       </header>
 

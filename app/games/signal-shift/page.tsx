@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import SignalShiftGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Signal Shift — Book Arcade",
   description:
     "A compact logic puzzle: rotate the circuit tiles until every cell connects from source to core.",
+  alternates: { canonical: gamePath("signal-shift") },
 };
 
 export default function SignalShiftPage() {
@@ -19,7 +21,7 @@ export default function SignalShiftPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 002 / 002</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(2)}</span>
         </nav>
       </header>
 

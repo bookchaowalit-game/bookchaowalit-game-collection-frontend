@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import GridlineGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Gridline — Book Arcade",
   description:
     "A compact tactical strategy game: capture three beacons while sentries patrol the grid.",
+  alternates: { canonical: gamePath("gridline") },
 };
 
 export default function GridlinePage() {
@@ -19,7 +21,7 @@ export default function GridlinePage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 003 / 003</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(3)}</span>
         </nav>
       </header>
 

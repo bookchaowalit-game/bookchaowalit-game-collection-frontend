@@ -36,9 +36,25 @@ app/
 ├── games/prism-drift/     # twelfth playable gravity platformer game
 ├── not-found.tsx       # styled 404
 ├── more-projects/      # directory of sibling bookchaowalit-* products
-├── api/mcp/             # MCP server endpoint (shared portfolio infrastructure)
+├── api/mcp/             # read-only MCP endpoint: `list_games` tool
+├── sitemap.ts           # generated from lib/games.ts
 └── globals.css          # Book Design System tokens (Game domain accent)
+lib/
+├── games.ts             # game catalog (source of truth for sitemap, headers, MCP)
+├── <game>.ts            # pure rules for each game, unit-tested in tests/
+└── mcp.ts, site.ts, roadmap.ts
 ```
+
+## Checks
+
+```bash
+npm run lint && npm run typecheck && npm test && npm run build
+```
+
+CI (`.github/workflows/ci.yml`) runs the same four commands. Tests use the
+Node test runner with type stripping (Node 22+). Adding a game means adding
+it to `lib/games.ts`; `tests/games.test.ts` fails until the route folder,
+homepage link, header counter and canonical path all exist.
 
 Design tokens follow the shared Book Design System doc (solo-empire workspace: docs/systems/book-design-system.md — not part of this repo) —
 ink/paper neutrals plus one domain accent (`Game`, magenta-purple). The

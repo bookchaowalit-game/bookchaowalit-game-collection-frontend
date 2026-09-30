@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import PocketFoundryGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Pocket Foundry — Book Arcade",
   description:
     "A compact automation game: place conveyors, a smelter, and a press to ship three production cycles.",
+  alternates: { canonical: gamePath("pocket-foundry") },
 };
 
 export default function PocketFoundryPage() {
@@ -19,7 +21,7 @@ export default function PocketFoundryPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 010 / 010</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(10)}</span>
         </nav>
       </header>
 
