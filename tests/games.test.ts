@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, it } from "node:test";
-import { GAMES, GAME_COUNT, findGame, gameCounterLabel, gamePath } from "../lib/games.ts";
+import { GAMES, GAME_COUNT, findGame, gameCounterLabel } from "../lib/games.ts";
 import { honestyCopy } from "../lib/roadmap.ts";
 import { buildSitemapEntries } from "../lib/sitemap-entries.ts";
 
@@ -26,11 +26,12 @@ describe("game catalog", () => {
     }
   });
 
-  it("links every game from the homepage", () => {
+  it("renders the homepage game list from the catalog", () => {
     const home = readFileSync(join(root, "app/page.tsx"), "utf8");
-    for (const game of GAMES) {
-      assert.ok(home.includes(`href="${gamePath(game.slug)}"`), `homepage missing ${game.slug}`);
-    }
+    assert.match(home, /import \{[^}]*\bGAMES\b[^}]*\} from "@\/lib\/games"/);
+    assert.ok(home.includes("href={gamePath(game.slug)}"), "homepage links via gamePath");
+    // Hand-written game links drift from the catalog; keep them out.
+    assert.doesNotMatch(home, /href="\/games\//);
   });
 
   it("gives every game page its own counter and canonical path", () => {
@@ -67,5 +68,15 @@ describe("sitemap", () => {
       assert.ok(urls.includes(`https://example.test/games/${game.slug}`), game.slug);
     }
     assert.equal(new Set(urls).size, urls.length);
+  });
+});
+
+describe("social metadata", () => {
+  it("does not reference image files missing from public/", () => {
+    const layout = readFileSync(join(root, "app/layout.tsx"), "utf8");
+    for (const [, path] of layout.matchAll(/["'](\/[\w./-]+\.(?:png|jpe?g|webp|svg))["']/g)) {
+      assert.ok(existsSync(join(root, "public", path)), `layout references missing ${path}`);
+    }
+    assert.ok(existsSync(join(root, "app/opengraph-image.tsx")), "generated OG image route");
   });
 });

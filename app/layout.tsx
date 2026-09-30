@@ -41,20 +41,12 @@ export const metadata: Metadata = {
     title: "Book Arcade — games, built in public",
     description: "A small arcade of games by bookchaowalit, built in public.",
     siteName: "Book Arcade",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Book Arcade",
-      },
-    ],
+    // Image comes from app/opengraph-image.tsx (generated at build time).
   },
   twitter: {
     card: "summary_large_image",
     title: "Book Arcade — games, built in public",
     description: "A small arcade of games by bookchaowalit, built in public.",
-    images: ["/og-image.png"],
     creator: "@bookchaowalit",
   },
   robots: {
