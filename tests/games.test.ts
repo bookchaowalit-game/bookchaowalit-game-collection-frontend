@@ -23,6 +23,9 @@ describe("game catalog", () => {
     for (const game of GAMES) {
       assert.ok(existsSync(join(root, "app/games", game.slug, "page.tsx")), game.slug);
       assert.ok(existsSync(join(root, "app/games", game.slug, "game-client.tsx")), game.slug);
+      const og = join(root, "app/games", game.slug, "opengraph-image.tsx");
+      assert.ok(existsSync(og), `${game.slug} social card`);
+      assert.ok(readFileSync(og, "utf8").includes(`renderGameOgImage("${game.slug}")`), `${game.slug} card slug`);
     }
   });
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GAMES, gamePath } from "@/lib/games";
-import { STAGES, STATUS_LABEL, honestyCopy } from "@/lib/roadmap";
+import { STAGES, STATUS_LABEL, honestyCopy, liveSummary } from "@/lib/roadmap";
 
 const STATUS_STYLE: Record<string, string> = {
   done: "bg-good/15 text-good border-good/30",
@@ -87,10 +87,7 @@ export default function Home() {
           <h2 className="text-sm font-semibold tracking-wide text-ink-faint uppercase">
             What&apos;s actually live right now
           </h2>
-          <p className="mt-2 max-w-xl text-ink-dim">
-            Twelve games are shipped and playable. The arcade is now moving from
-            game-by-game releases toward a dedicated select screen.
-          </p>
+          <p className="mt-2 max-w-xl text-ink-dim">{liveSummary()}</p>
 
           <ol className="mt-8 space-y-3">
             {STAGES.map((stage, i) => (

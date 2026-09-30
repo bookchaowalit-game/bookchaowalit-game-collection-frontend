@@ -2,9 +2,11 @@
 
 ## Current state
 
-**Score: 7.5/10** (was 7/10 after pass 1, 6/10 originally). Twelve small games with pure, unit-tested rule
-modules; lint, typecheck, 94 tests and the production build pass locally
-and in CI. Gaps are mostly SEO/metadata polish and UI-level verification.
+**Score: 8/10** (7.5 after pass 2, 7 after pass 1, 6 originally). Twelve
+small games with pure, unit-tested rule modules; lint, typecheck, 99 tests
+and the production build pass. Every game has its own social card and all
+count/roster copy comes from the catalog. Remaining gaps: accessibility of
+canvas games, high scores, UI-level verification.
 
 ## Backlog
 
@@ -15,10 +17,6 @@ and in CI. Gaps are mostly SEO/metadata polish and UI-level verification.
   one place if the arcade is served elsewhere.
 
 ### P1
-- Homepage "What's actually live" paragraph still hard-codes "Twelve";
-  derive it from `GAME_COUNT` (and make `honestyCopy()` number-aware).
-- Per-game OG images (`app/games/<slug>/opengraph-image.tsx`) using the
-  catalog title/summary.
 - Accessibility pass on the canvas/keyboard games: visible focus, keyboard
   alternatives for pointer-only controls, `prefers-reduced-motion`.
 - Stage 3 roadmap items: select screen and local high scores
@@ -28,7 +26,18 @@ and in CI. Gaps are mostly SEO/metadata polish and UI-level verification.
 - Playwright smoke test that opens each game route and checks for console
   errors.
 
-## Done in this pass (pass 2)
+## Done in this pass (pass 3)
+- Roadmap/homepage copy derived from `lib/games.ts`: `honestyCopy(count)`
+  and `liveSummary(count)` spell and pluralize the count, the "First
+  playable game" stage lists catalog titles; adding a game no longer needs
+  copy edits. Tests cover 1/13/25 counts and forbid hard-coded counts in
+  `app/page.tsx`.
+- Per-game social cards: `app/games/<slug>/opengraph-image.tsx` via the
+  shared `lib/game-og.tsx` (title, summary, "GAME 003 / 012"). Verified in
+  `next build`: 12 static 1200x630 PNGs, og:image/alt meta per game page.
+  Catalog test requires a card for every game.
+
+## Done in pass 2
 - Social cards no longer 404: `/og-image.png` reference removed and
   `app/opengraph-image.tsx` generates a 1200x630 PNG at build time (checked
   in `next build` output; og:image and twitter:image meta present on home
