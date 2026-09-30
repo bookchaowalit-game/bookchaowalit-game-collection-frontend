@@ -26,6 +26,16 @@ canvas games, high scores, UI-level verification.
 - Playwright smoke test that opens each game route and checks for console
   errors.
 
+## Done in this pass (pass 4)
+- Edge-case audit of every `lib/` game model (numbers, rounding next to win
+  thresholds, NaN/huge inputs, deck draw/reshuffle, pluralized copy). No real
+  bug found: all state is integer-valued, frame deltas are clamped to 50 ms in
+  the clients, win checks use raw counts (not rounded percentages), there is no
+  `Math.random`/biased shuffle, and `countWord`/`honestyCopy` pluralize 0/1/n.
+  No code change; checks re-run green.
+- Backlog (P2): `tickPulse`/`movePlayer` would stick on NaN if a caller ever
+  passed one (not reachable from the current clients); guard if reused.
+
 ## Done in this pass (pass 3)
 - Roadmap/homepage copy derived from `lib/games.ts`: `honestyCopy(count)`
   and `liveSummary(count)` spell and pluralize the count, the "First
