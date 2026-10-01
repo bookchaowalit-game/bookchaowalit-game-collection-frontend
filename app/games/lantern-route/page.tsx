@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import LanternRouteGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Lantern Route — Book Arcade",
   description:
     "A compact interactive narrative game: guide a lantern through five chapters and choose what reaches the lighthouse.",
+  alternates: { canonical: gamePath("lantern-route") },
 };
 
 export default function LanternRoutePage() {
@@ -19,7 +21,7 @@ export default function LanternRoutePage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 011 / 011</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(11)}</span>
         </nav>
       </header>
 

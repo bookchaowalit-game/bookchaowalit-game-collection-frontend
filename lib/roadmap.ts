@@ -1,3 +1,5 @@
+import { GAMES, GAME_COUNT } from "./games.ts";
+
 export type StageStatus = "done" | "progress" | "planned";
 
 export type Stage = {
@@ -6,7 +8,44 @@ export type Stage = {
   status: StageStatus;
 };
 
-/** Honest build-in-public roadmap. Keep tests and UI in sync. */
+const NUMBER_WORDS = [
+  "zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+  "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+  "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+];
+
+/** "twelve" for 12; digits once words stop reading well (21+). */
+export function countWord(n: number): string {
+  return Number.isInteger(n) && n >= 0 && n < NUMBER_WORDS.length
+    ? NUMBER_WORDS[n]
+    : String(n);
+}
+
+function capitalize(text: string): string {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+/** "A, B, and C" (Oxford comma, as in the original copy). */
+export function listTitles(titles: readonly string[]): string {
+  if (titles.length <= 1) return titles.join("");
+  if (titles.length === 2) return `${titles[0]} and ${titles[1]}`;
+  return `${titles.slice(0, -1).join(", ")}, and ${titles[titles.length - 1]}`;
+}
+
+/** "Twelve games are live" / "One game is live", from the catalog size. */
+export function honestyCopy(count: number = GAME_COUNT): string {
+  return count === 1
+    ? "One game is live"
+    : `${capitalize(countWord(count))} games are live`;
+}
+
+/** Homepage "what's actually live" paragraph, derived from the catalog. */
+export function liveSummary(count: number = GAME_COUNT): string {
+  const shipped = count === 1 ? "One game is" : `${capitalize(countWord(count))} games are`;
+  return `${shipped} shipped and playable. The arcade is now moving from game-by-game releases toward a dedicated select screen.`;
+}
+
+/** Honest build-in-public roadmap, derived from the game catalog. */
 export const STAGES: Stage[] = [
   {
     label: "Visual identity & shell",
@@ -15,12 +54,12 @@ export const STAGES: Stage[] = [
   },
   {
     label: "First playable game",
-    detail: "Neon Harvest, Signal Shift, Gridline, Midnight Market, Pulse Parade, Card Cascade, Last Light, Goal Line, Echo Chamber, Pocket Foundry, Lantern Route, and Prism Drift — twelve small games shipped end-to-end.",
+    detail: `${listTitles(GAMES.map((game) => game.title))} — ${countWord(GAME_COUNT)} small ${GAME_COUNT === 1 ? "game" : "games"} shipped end-to-end.`,
     status: "done",
   },
   {
     label: "Full arcade",
-    detail: "Twelve games are live; a dedicated select screen and high scores are next.",
+    detail: `${honestyCopy()}; a dedicated select screen and high scores are next.`,
     status: "progress",
   },
 ];
@@ -38,8 +77,4 @@ export function hasShippedGame(stages: Stage[] = STAGES): boolean {
       stage.status === "done" &&
       /playable game|full arcade/i.test(stage.label),
   );
-}
-
-export function honestyCopy(): string {
-  return "Twelve games are live";
 }

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import PrismDriftGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Prism Drift — Book Arcade",
   description:
     "A compact gravity-shifting platformer: collect three prisms, avoid the seam, and drift into the exit.",
+  alternates: { canonical: gamePath("prism-drift") },
 };
 
 export default function PrismDriftPage() {
@@ -19,7 +21,7 @@ export default function PrismDriftPage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 012 / 012</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(12)}</span>
         </nav>
       </header>
 

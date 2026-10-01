@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import GoalLineGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Goal Line — Book Arcade",
   description:
     "A compact sports arcade game: read the keeper, choose your shot, and score three goals from five penalties.",
+  alternates: { canonical: gamePath("goal-line") },
 };
 
 export default function GoalLinePage() {
@@ -19,7 +21,7 @@ export default function GoalLinePage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 008 / 008</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(8)}</span>
         </nav>
       </header>
 

@@ -8,6 +8,7 @@ import {
   calculateDemand,
   canOpenMarket,
   openMarket,
+  type MarketState,
 } from "../lib/midnight-market.ts";
 
 describe("Midnight Market rules", () => {
@@ -48,7 +49,7 @@ describe("Midnight Market rules", () => {
   });
 
   it("has a winning full-prep route from the starting budget", () => {
-    let state = { ...INITIAL_STATE, selectedPrep: "full" as const, selectedPrice: 8 };
+    let state: MarketState = { ...INITIAL_STATE, selectedPrep: "full", selectedPrice: 8 };
 
     for (let day = 0; day < MARKET_DAYS.length; day += 1) {
       state = openMarket(state);

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { gameCounterLabel, gamePath } from "@/lib/games";
 import PulseParadeGame from "./game-client";
 
 export const metadata: Metadata = {
   title: "Pulse Parade — Book Arcade",
   description:
     "A compact rhythm game: hit four timing lanes, build a combo, and keep the parade moving.",
+  alternates: { canonical: gamePath("pulse-parade") },
 };
 
 export default function PulseParadePage() {
@@ -19,7 +21,7 @@ export default function PulseParadePage() {
           >
             BOOK ARCADE
           </Link>
-          <span className="font-mono text-xs text-ink-faint">GAME 005 / 005</span>
+          <span className="font-mono text-xs text-ink-faint">{gameCounterLabel(5)}</span>
         </nav>
       </header>
 
